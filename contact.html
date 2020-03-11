@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" type = "text/css" href = "css/html5reset.css">
+  <link rel = "stylesheet" type = "text/css" href = "css/contact.css">
+  <link rel="shortcut icon" type="image/png" href = "images/munumlogo.png"/>
+  <title>Conference Coordination</title>
+</head>
+<body>
+  <div class="skip"><a href="#main">Skip to Main Content</a></div>
+  <header>
+    <nav class="navbar" role="navigation">
+      <div class="container">
+        <ul class="menu">
+          <li><a href="index.html">About</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a class ="current" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class = "contactmain">
+    <div class = "contacts">
+    <h1>Communication</h1>
+    <div class = "leaguerackham">
+      <h2>Michigan League</h2>
+      <ul>
+        <li>Sarah Hamel: <i>hamels@umich.edu</i> | (734) 936-2216</li>
+        <li>Barbara Niemi: <i>bwiggins@umich.edu</i> | (734) 763-6595</li>
+        <li>Building Manager: (734) 260-4117</li>
+      </ul>
+      <h2>Rackham Graduate School</h2>
+      <ul>
+        <li>Karen Forbes: <i>rackhamscheduling@umich.edu</i> | (734) 764-8572</li>
+        <li>Building Manager: (734) 417-8282</li>
+      </ul>
+    </div>
+    <div class = "pcci">
+      <h2>Palmer Commons</h2>
+      <ul>
+        <li>General: <i>palmereventservices@umich.edu</i> | (734) 615-9259</li>
+        <li>Kathi Compton: <i>kcompton@umich.edu</i> | (734) 647-9686</li>
+      </ul>
+      <h2>Center for Campus Involvement</h2>
+      <ul>
+        <li>Major Events: <i>majorevents@umich.edu</i> | (734) 763-5900</li>
+        <li>Shannon Rice: <i>sberritt@umich.edu</i></li>
+      </ul>
+    </div>
+  </div>
+  <div class = "form">
+    <form action = "https://formspree.io/xbjybopg" method = "POST">
+    <fieldset>
+       <legend>Contact Me</legend>
+       <div class = "contact">
+          <label for = "name">Name: </label><input type = "text" id = "name" name = "name" placeholder = "Name" required="" /> 
+          <br><label for = "email">Email Address: </label><input type = "email" id = "email" name = "email" placeholder = "placeholder@gmail.com" required=""></textarea>
+       </div>
+       <div>
+        What is your affiliation to MUNUM?
+        <br><input type = "radio" name = "affiliation" id = "staff"> <label for = "staff">MUNUM Staff</label><br>
+        <input type = "radio" name = "affiliation" id = "student"> <label for = "student">Student</label><br>
+        <input type = "radio" name = "affiliation" id = "grad"> <label for = "grad">Graduate</label><br>
+        <input type = "radio" name = "affiliation" id = "p"> <label for = "p">Participant</label><br>
+        <input type = "radio" name = "affiliation" id = "a"> <label for = "a">Advisor</label><br>
+        <input type = "radio" name = "affiliation" id = "ustaff"> <label for = "ustaff">University Staff</label><br>
+        <input type = "radio" name = "affiliation" id = "c"> <label for = "c">Community Member</label><br>
+        <input type = "radio" name = "affiliation" id = "other"> <label for = "other">Other</label><br>
+       </div>
+       <div>
+       What is your question about?
+       <br><label><input type = "checkbox" />Reservations</label>
+       <br><label><input type = "checkbox" />Set-up</label>
+       <br><label><input type = "checkbox" />Technology Request</label>
+       <br><label><input type = "checkbox" />Scheduling</label>
+       <br><label><input type = "checkbox" />General</label>
+       </div>
+       <div>
+          <label for ="comment">Question/Comment/Concern:</label><br><input type = "textarea" name ="comment" id = "comment"/>
+       </div>
+       <div>
+          <input type = "submit" value = "Send"/>
+       </div>
+    </fieldset>
+    </form>
+  </div>
+  </main>
+  <footer>
+    <p>Grace Knitter 2020 | <i>MUNUM XXXIII</i></p>
+  </footer>
+</body>
+</html>
