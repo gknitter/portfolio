@@ -53,7 +53,9 @@ main.indexmain{
 .calendar{
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr 2fr 2fr;
+  border: 5px ridge #00274C;
+  padding: 5px;
 }
 .calendar h2{
   text-align: center;
@@ -62,6 +64,11 @@ main.indexmain{
   padding-left: 5px;
   list-style-position: inside;
   list-style-type: upper-roman;
+}
+.calendar div{
+  border: 5px ridge #00274C;
+  margin-bottom: 5px;
+  background-image: url("../images/concrete_seamless.png");
 }
 /*TIMELINE END*/
 
@@ -253,9 +260,3 @@ footer i{
     margin: auto;
   }
 }
-
-
-
-
-
-
