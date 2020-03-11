@@ -1,0 +1,261 @@
+/*GENERAL START*/
+body{
+  color: #00274C;
+}
+h1{
+  padding-top: 10px;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+h2{
+   font-size: 18px;
+   padding-top: 15px;
+   font-family: 'Lobster', cursive;
+}
+li{
+  list-style: none;
+  font-family: 'Cabin', sans-serif;
+}
+/*GENERAL END*/
+
+/*INDEX START*/
+main.indexmain{
+  background-size: cover ;
+  background-position: center;
+  background-image: url("../images/munumlogo.png");
+  background-repeat: no-repeat;
+  background-color: white;
+  background-attachment: fixed;
+  margin: 5px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+  background-color: rgba(250,250,250,.5);
+  border-radius: 7px;
+  flex-basis: 400px;
+  padding: 5px 5px 5px 5px;
+}
+.indexmain h1{
+  font-variant: small-caps;
+}
+.indexmain h2, p, ul{
+  text-align: center;
+}
+.indexmain ul{
+  font-variant: small-caps;
+}
+/*INDEX END*/
+
+/*TIMELINE START*/
+.calendar{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.calendar h2{
+  text-align: center;
+}
+.calendar li{
+  padding-left: 5px;
+  list-style-position: inside;
+  list-style-type: upper-roman;
+}
+/*TIMELINE END*/
+
+/*ROOMS START*/
+div.gallery{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img{
+  max-width: 400px;
+ /*height: 250px;*/
+}
+/*ROOMS END*/
+
+/*CONTACT START*/
+main.contactmain{
+   display: grid; 
+   grid-template-columns: auto;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-row-gap: 15px;
+   color: #00274C;
+}
+.contactmain .contacts{
+   grid-row: 1/span 1;
+   text-align: center;
+}
+.contactmain .form{
+   grid-row: 2/span 2;
+}
+main.contactmain ul{
+   font-size: 14px;
+   padding-top: 5px;
+}
+/*FORM*/
+form fieldset{
+   border-radius: 10px;
+   font-family: serif;
+}
+ form legend{
+   margin: auto;
+   text-align: right;
+   font-weight: bold;
+   font-variant: small-caps; 
+   padding-top: 10px;
+}
+form fieldset div{
+   border: 2px solid #00274C;
+   margin: 2%;
+   padding: 2%;
+   border-radius: 5px;
+}
+form input[type=submit]{
+  border: 1px solid #00274C;
+  width: 120px;
+  padding: 5%;
+  background-color: #FFCB05;
+  align-content: center;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+form input, textarea, select{
+   background-color:#FFFFFF;
+}
+/*CONTACT END*/
+
+/*MENU and HEADER*/
+.menu >li{
+  float: center;
+}
+.nav >li {
+    position: relative;
+    display: block;
+    align-items: center;
+}
+header{
+  display: block;
+  text-align: center;
+  border-bottom: #00274C;
+  border-bottom-width: 5px;
+  border-bottom-style: groove;
+  border-bottom-color: #FFCB05;
+}
+.menu{
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: #00274C;
+  border-bottom-width: 5px;
+  border-bottom-style: groove;
+  border-bottom-color: #FFCB05;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+.menu >li a{
+  color: #00274C;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-bottom: #00274C;
+  border-width: 5px;
+}
+
+.menu >li a:hover{
+  color: #FFCB05;
+  text-decoration: underline;
+}
+.menu >li a:focus{
+  text-decoration-style: dashed;
+}
+a.skip{
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: underline;
+}
+.menu .current{
+  background-color: #D3D3D3;
+  text-decoration: underline;
+  text-decoration-style: groove;
+}
+/*END OF MENU*/
+
+/*FOOTER*/
+footer{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  background-color: #D3D3D3;
+  font-family: 'Lobster', cursive;
+}
+footer i{
+  font-family: 'Cabin', sans-serif;
+}
+/*END OF FOOTER*/
+
+/*MIDSIZE SCREEN*/
+@media screen and (min-width: 850px){
+  main{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .form{
+    grid-row: 1/span 1;
+    grid-column: 2/span 1;
+  }
+  .menu{
+    flex-direction: column;
+    /*get this shifted to the left*/
+    justify-content: left;
+    align-items: left;
+  }
+  .menu >li a{
+    justify-content: left;
+    align-items: left;
+  }
+}
+
+/*LARGE SCREEN*/
+@media screen and (min-width: 1060px){
+  main{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .leaguerackham{
+    grid-column: 1/span 1;
+    grid-row: auto;
+  }
+  .pcci{
+    grid-column: 2/span 1;
+    grid-row: auto;
+  }
+  .form{
+    grid-row: auto;
+    grid-column: 3/span 2;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
