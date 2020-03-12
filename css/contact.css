@@ -183,19 +183,28 @@ header{
 .menu >li a:focus{
   text-decoration-style: dashed;
 }
+/*a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}*/
 a.skip{
-  left: 0;
-  padding: 6px;
+  left: -10;
+  padding: 10px;
   position: absolute;
   top: -40px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
+ /* -webkit-transition: top 1s ease-out;*/
+  /*transition: top 1s ease-out;*/
+  /*z-index: 1;*/
 }
 a.skip:focus{
-  top:20px;
-  color: black;
-  text-decoration-style: underline;
+  top:5px;
+  color: #FFCB05;
+  text-decoration-style: dashed;
 }
 .menu .current{
   background-color: #D3D3D3;
@@ -261,3 +270,4 @@ footer i{
     margin: auto;
   }
 }
+/* testing? */
