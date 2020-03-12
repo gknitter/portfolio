@@ -62,6 +62,7 @@ main.indexmain{
 }
 .calendar li{
   padding-left: 5px;
+  padding-right: 5px;
   list-style-position: inside;
   list-style-type: upper-roman;
 }
@@ -80,26 +81,29 @@ div.gallery{
 }
 img{
   max-width: 400px;
- /*height: 250px;*/
 }
 /*ROOMS END*/
 
 /*CONTACT START*/
-main.contactmain{
+.contactcontent{
    display: grid; 
    grid-template-columns: auto;
    grid-template-rows: 1fr 1fr 1fr;
    grid-row-gap: 15px;
    color: #00274C;
 }
-.contactmain .contacts{
+h2.title{
+    font-variant: small-caps;
+    text-decoration: underline #00274C;  
+  }
+.contacts{
    grid-row: 1/span 1;
    text-align: center;
 }
-.contactmain .form{
+.form{
    grid-row: 2/span 2;
 }
-main.contactmain ul{
+.contactmain ul{
    font-size: 14px;
    padding-top: 5px;
 }
@@ -157,10 +161,6 @@ header{
   display: block;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-bottom: #00274C;
-  border-bottom-width: 5px;
-  border-bottom-style: groove;
-  border-bottom-color: #FFCB05;
   font-variant: small-caps;
   font-weight: bold;
   
@@ -183,15 +183,6 @@ header{
 .menu >li a:focus{
   text-decoration-style: dashed;
 }
-/*a.skip-main {
-    left:-999px;
-    position:absolute;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    z-index:-999;
-}*/
 a.skip{
   left: -10;
   padding: 10px;
@@ -229,29 +220,91 @@ footer i{
 
 /*MIDSIZE SCREEN*/
 @media screen and (min-width: 850px){
-  main{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  .form{
-    grid-row: 1/span 1;
-    grid-column: 2/span 1;
-  }
+  /*MENU*/
   .menu{
-    flex-direction: column;
-    /*get this shifted to the left*/
-    justify-content: left;
-    align-items: left;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 12px;
   }
-  .menu >li a{
-    justify-content: left;
-    align-items: left;
+  /*FOOTER*/
+  footer{
+    padding: 12px;
+  }
+  /*GENERAL*/
+  p{
+    font-size: 18px;
+  }
+  h1{
+    font-size: 36px;
+    padding-bottom: 10px;
+  }
+  /*INDEX*/
+  .indexmain h1{
+    color: #fff;
+    font-size: 64px;
+    text-shadow: 
+      0 1px 0 #ccc, 
+      0 2px 0 #c9c9c9, 
+      0 3px 0 #bbb, 
+      0 4px 0 #b9b9b9, 
+      0 5px 0 #aaa, 
+      0 6px 1px rgba(0,0,0,.1), 
+      0 0 5px rgba(0,0,0,.1), 
+      0 1px 3px rgba(0,0,0,.3), 
+      0 3px 5px rgba(0,0,0,.2), 
+      0 5px 10px rgba(0,0,0,.25), 
+      0 10px 10px rgba(0,0,0,.2), 
+      0 20px 20px rgba(0,0,0,.15);
+  }
+  .indexmain li{
+    font-size: 24px;
+  }
+  .indexmain h2{
+    font-size: 36px;
+  }
+  /*TIMELINE*/
+  .calendar{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .5fr .5fr .5fr 1fr 1fr;
+    grid-column-gap: 5px;
+  }
+  .calendar h2{
+    font-size: 24px;
+    padding-top: 5px;
+  }
+  /*CONTACT*/
+  .contactcontent{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form{
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .contactcontent h2{
+    font-size: 28px;
+  }
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contacts ul{
+    padding-bottom: 15px;
+    font-size: 15px;
+  }
+  h2.title{
+    font-size: 32px;
+  }
+  .contacts li{
+    padding-bottom: 5px;
   }
 }
 
 /*LARGE SCREEN*/
-@media screen and (min-width: 1060px){
+/*@media screen and (min-width: 1060px){
   main{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -269,5 +322,5 @@ footer i{
     grid-column: 3/span 2;
     margin: auto;
   }
-}
+}*/
 /* testing? */
