@@ -304,23 +304,26 @@ footer i{
 }
 
 /*LARGE SCREEN*/
-/*@media screen and (min-width: 1060px){
-  main{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+@media screen and (min-width: 1060px){
+  /*MENU*/
+  .menu{
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
   }
-  .leaguerackham{
-    grid-column: 1/span 1;
-    grid-row: auto;
+  .nav >li {
+      display: flex;
+      /*text-align: left;*/
   }
-  .pcci{
-    grid-column: 2/span 1;
-    grid-row: auto;
+  header{
+    display: flex;
+   /* text-align: left;*/
   }
-  .form{
-    grid-row: auto;
-    grid-column: 3/span 2;
-    margin: auto;
+  /*TIMELINE*/
+  .calendar{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr .75fr .75fr 1fr;
   }
-}*/
+}
 /* testing? */
