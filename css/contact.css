@@ -76,12 +76,20 @@ main.indexmain{
 
 /*ROOMS START*/
 div.gallery{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-img{
-  max-width: 400px;
+.gallery img{
+  width: 75%;
+  max-width: 350px;
+  margin: 5px;
+}
+.gallery img{
+  filter: sepia(75%);
+}
+.gallery img:hover{
+  filter: none;
 }
 /*ROOMS END*/
 
@@ -318,6 +326,12 @@ footer i{
   .contacts li{
     padding-bottom: 5px;
   }
+  /*ROOMS*/
+  div.gallery{
+    flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /*LARGE SCREEN*/
@@ -338,7 +352,6 @@ footer i{
   .headline{
     animation: none;
     margin: auto;
-    color: #00274C;
     font-size: 64px;
     text-shadow: 
       0 1px 0 #ccc, 
@@ -358,6 +371,10 @@ footer i{
   .calendar{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr .75fr .75fr 1fr;
+  }
+  /*ROOMS*/
+  div.gallery{
+    justify-content: space-between;
   }
 }
 /*REDUCED MOTION*/
