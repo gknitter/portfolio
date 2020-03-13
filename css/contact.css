@@ -314,7 +314,6 @@ footer i{
   }
   .nav >li {
       display: flex;
-      /*text-align: left;*/
   }
   header{
     display: flex;
@@ -326,4 +325,4 @@ footer i{
     grid-template-rows: 1fr .75fr .75fr 1fr;
   }
 }
-/* testing? */
+/* testing?  part 2*/
