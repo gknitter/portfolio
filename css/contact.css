@@ -152,11 +152,14 @@ form input, textarea, select{
 }
 header{
   display: block;
-  text-align: center;
+  /*text-align: center;*/
   border-bottom: #00274C;
   border-bottom-width: 5px;
   border-bottom-style: groove;
   border-bottom-color: #FFCB05;
+}
+header h1{
+  text-align: center;
 }
 .menu{
   display: block;
