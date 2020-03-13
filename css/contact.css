@@ -28,6 +28,7 @@ main.indexmain{
   background-color: white;
   background-attachment: fixed;
   margin: 5px;
+  /*Parallax image created with background position, repeat, and attachment*/
 }
 .text {
   display: flex;
@@ -324,5 +325,9 @@ footer i{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr .75fr .75fr 1fr;
   }
+}
+/*REDUCED MOTION*/
+@media screen and (prefers-reduced-motion: reduce){
+  
 }
 /* testing?  part 3*/
