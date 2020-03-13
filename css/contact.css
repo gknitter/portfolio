@@ -161,6 +161,33 @@ header{
 header h1{
   text-align: center;
 }
+/*ANIMATION*/
+.headline{
+  animation: title-blink 5s infinite;
+  -webkit-animation: title-blink 5s infinite;
+  display: none;
+}
+
+@-webkit-keyframes title-blink {
+  20%, 24%, 55% {
+    color: #00274C;
+    text-shadow: none;
+  }
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {  
+    text-shadow: 0 0 5px #FFCB05, 0 0 15px #FFCB05, 0 0 20px #FFCB05, 0 0 40px #FFCB05, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #00274C;
+  }
+}
+@keyframes blink {
+  20%, 24%, 55% {
+    color: #00274C;
+    text-shadow: none;
+  }
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+  text-shadow: 0 0 5px #FFCB05, 0 0 15px #FFCB05, 0 0 20px #FFCB05, 0 0 40px #FFCB05, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #00274C;
+  }
+}
 .menu{
   display: block;
   padding-bottom: 10px;
@@ -231,6 +258,9 @@ footer i{
     font-size: 24px;
     margin: 12px;
   }
+  .headline{
+    display: block;
+  }
   /*FOOTER*/
   footer{
     padding: 12px;
@@ -244,23 +274,6 @@ footer i{
     padding-bottom: 10px;
   }
   /*INDEX*/
-  .indexmain h1{
-    color: #fff;
-    font-size: 64px;
-    text-shadow: 
-      0 1px 0 #ccc, 
-      0 2px 0 #c9c9c9, 
-      0 3px 0 #bbb, 
-      0 4px 0 #b9b9b9, 
-      0 5px 0 #aaa, 
-      0 6px 1px rgba(0,0,0,.1), 
-      0 0 5px rgba(0,0,0,.1), 
-      0 1px 3px rgba(0,0,0,.3), 
-      0 3px 5px rgba(0,0,0,.2), 
-      0 5px 10px rgba(0,0,0,.25), 
-      0 10px 10px rgba(0,0,0,.2), 
-      0 20px 20px rgba(0,0,0,.15);
-  }
   .indexmain li{
     font-size: 24px;
   }
@@ -321,7 +334,25 @@ footer i{
   }
   header{
     display: flex;
-   /* text-align: left;*/
+  }
+  .headline{
+    animation: none;
+    margin: auto;
+    color: #00274C;
+    font-size: 64px;
+    text-shadow: 
+      0 1px 0 #ccc, 
+      0 2px 0 #c9c9c9, 
+      0 3px 0 #bbb, 
+      0 4px 0 #b9b9b9, 
+      0 5px 0 #aaa, 
+      0 6px 1px rgba(0,0,0,.1), 
+      0 0 5px rgba(0,0,0,.1), 
+      0 1px 3px rgba(0,0,0,.3), 
+      0 3px 5px rgba(0,0,0,.2), 
+      0 5px 10px rgba(0,0,0,.25), 
+      0 10px 10px rgba(0,0,0,.2), 
+      0 20px 20px rgba(0,0,0,.15);
   }
   /*TIMELINE*/
   .calendar{
@@ -331,6 +362,8 @@ footer i{
 }
 /*REDUCED MOTION*/
 @media screen and (prefers-reduced-motion: reduce){
-  
+  .headline{
+    animation: none;
+  }
 }
 /* testing?  part 3*/
