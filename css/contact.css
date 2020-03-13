@@ -30,7 +30,7 @@ main.indexmain{
   margin: 5px;
   /*Parallax image created with background position, repeat, and attachment*/
 }
-.text {
+.indexcontent {
   display: flex;
   flex-direction: column;
   margin: 12px;
@@ -47,6 +47,9 @@ main.indexmain{
 }
 .indexmain ul{
   font-variant: small-caps;
+}
+.flip{
+  display: none;
 }
 /*INDEX END*/
 
@@ -227,9 +230,6 @@ a.skip{
   padding: 10px;
   position: absolute;
   top: -40px;
- /* -webkit-transition: top 1s ease-out;*/
-  /*transition: top 1s ease-out;*/
-  /*z-index: 1;*/
 }
 a.skip:focus{
   top:5px;
@@ -346,6 +346,9 @@ footer i{
   .nav >li {
       display: flex;
   }
+  a.skip:focus{
+    right:10px;
+  }
   header{
     display: flex;
   }
@@ -375,6 +378,44 @@ footer i{
   /*ROOMS*/
   div.gallery{
     justify-content: space-between;
+  }
+  /*FLIPCARD*/
+  .flip{
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    width: 369px;
+    height: 136px;
+    perspective: 1000px;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  .flip:focus .flip-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-front {
+    background-color: #00274C;
+    color: black;
+  }
+  .flip-back {
+    display: grid;
+    background-color: #00274C;
+    color: #FFCB05;
+    vertical-align: middle;
+    margin: 0 auto;
+    transform: rotateY(180deg);
   }
 }
 /*REDUCED MOTION*/
