@@ -126,7 +126,7 @@ form fieldset{
 }
  form legend{
    margin: auto;
-   text-align: right;
+   text-align: center;
    font-weight: bold;
    font-variant: small-caps; 
    padding-top: 10px;
@@ -212,8 +212,8 @@ header h1{
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   border-bottom: #00274C;
   border-width: 5px;
 }
